@@ -1,0 +1,10 @@
+# Ignore the python compiled files
+
+*.pyc
+
+# Ignore the venv directories and configuration
+
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
