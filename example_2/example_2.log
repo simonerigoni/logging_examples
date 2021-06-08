@@ -1,0 +1,6 @@
+2021-01-30 11:42:22,727:INFO:Generate some random integers
+2021-01-30 11:42:22,728:WARNING:	Value: 10 -> Warning!
+2021-01-30 11:42:22,728:ERROR:	Value: 13 -> Error!
+2021-01-30 11:42:22,728:ERROR:	Value: 15 -> Error!
+2021-01-30 11:42:22,728:ERROR:	Value: 15 -> Error!
+2021-01-30 11:42:22,728:CRITICAL:	Value: 17 -> Critical!
