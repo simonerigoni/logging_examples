@@ -3,7 +3,7 @@
 ## New ideas
 
 
-## Todo
+## To Do
 
 
 ## In Progress
