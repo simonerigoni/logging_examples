@@ -35,7 +35,7 @@ From each example folder you can run `python example_1.py`, `python example_2.py
 
 The module SQLiteHandler.py can be also run with `python SQLiteHandler.py` to test if everything is working as expected
 
-You can find more information in this blog post
+You can find more information in this [blog post](https://medium.com/nerd-for-tech/logging-with-logging-in-python-d3d8eb9a155a)
 
 
 ## Acknowledgements
