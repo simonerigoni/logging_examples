@@ -4,7 +4,7 @@
 # python example_1.py
 
 
-import random 
+import random
 
 
 if __name__ == '__main__':
@@ -17,7 +17,8 @@ if __name__ == '__main__':
     error_threshold = 10
     critical_threshold = 15
 
-    print('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
+    print('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(
+        num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
 
     print('Start')
     for i in range(num_numbers):

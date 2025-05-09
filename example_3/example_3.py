@@ -14,7 +14,7 @@
 
 
 import os
-import random 
+import random
 import logging
 import SQLiteHandler
 
@@ -28,14 +28,16 @@ my_table = 'log'
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-attributes_list = ['asctime', 'levelname', 'message'] 
-formatter = logging.Formatter('%(' + ((')s' + SQLiteHandler.DEFAULT_SEPARATOR + '%(').join(attributes_list)) + ')s')
+attributes_list = ['asctime', 'levelname', 'message']
+formatter = logging.Formatter(
+    '%(' + ((')s' + SQLiteHandler.DEFAULT_SEPARATOR + '%(').join(attributes_list)) + ')s')
 
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.DEBUG)
 console_handler.setFormatter(formatter)
 
-sql_handler = SQLiteHandler.SQLiteHandler(database = my_database, table = my_table, attributes_list = attributes_list)
+sql_handler = SQLiteHandler.SQLiteHandler(
+    database=my_database, table=my_table, attributes_list=attributes_list)
 sql_handler.setLevel(logging.INFO)
 sql_handler.setFormatter(formatter)
 
@@ -63,7 +65,8 @@ if __name__ == '__main__':
     error_threshold = 10
     critical_threshold = 15
 
-    logger.debug('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
+    logger.debug('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(
+        num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
 
     logger.debug('Start')
     for i in range(num_numbers):

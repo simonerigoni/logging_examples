@@ -14,7 +14,7 @@
 
 
 import os
-import random 
+import random
 import logging
 
 
@@ -22,7 +22,8 @@ current_filename = os.path.basename(__file__).rsplit('.', 1)[0]
 
 # changing level we can change frome what level we want to log the events
 
-logging.basicConfig(filename = current_filename + '.log', level = logging.INFO, format = '%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(filename=current_filename + '.log',
+                    level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
 
 if __name__ == '__main__':
@@ -35,7 +36,8 @@ if __name__ == '__main__':
     error_threshold = 10
     critical_threshold = 15
 
-    logging.debug('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
+    logging.debug('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(
+        num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
 
     logging.debug('Start')
     for i in range(num_numbers):
