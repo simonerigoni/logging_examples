@@ -1,12 +1,21 @@
-# To do list 
+# Logging examples
 
-## New ideas
+## Introduction
 
+Overview of the status of the tasks of this project.
 
-## To Do
-
-
-## In Progress
+## Tasks
 
 
-## Done ✓
+### To do
+
+- [ ]
+
+### In Progress
+
+- [ ]
+
+### Done ✓
+
+- [x] Project initialization
+- [x] Add my_scripts/*.ps1

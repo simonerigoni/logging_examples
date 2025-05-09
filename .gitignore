@@ -1,10 +1,21 @@
-# Ignore the python compiled files
+# General stuff to ignore
 
+## Python compiled files
 *.pyc
 
-# Ignore the venv directories and configuration
+# Actual project folders and files to ignore
 
-Include/
-Lib/
-Scripts/
-pyvenv.cfg
+## Virtual enviroment folder
+.venv/
+
+## pytest cache files 
+.pytest_cache/
+
+## Temp stuff
+temp/
+
+## Logs
+logs/
+
+## Code style reports
+code_style/
