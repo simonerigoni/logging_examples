@@ -1,4 +1,4 @@
-# General stuff to ignore
+# Files, directories or patterns that should be excluded from Git tracking
 
 ## Python compiled files
 *.pyc
