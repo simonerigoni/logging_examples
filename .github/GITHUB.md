@@ -1,5 +1,5 @@
 # Logging examples
 
-## GitHub Repo Configuration
+## GitHub
 
 This directory holds GitHub-specific files like workflows and templates.
