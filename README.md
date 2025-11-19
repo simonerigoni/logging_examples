@@ -69,11 +69,11 @@ The module SQLiteHandler.py can be also run with `python SQLiteHandler.py` to te
 
 ## List of activities
 
-In the [TODO](TODO.md) file you can find the list of tasks and on going activities.
+In the [TODO.md](TODO.md) file you can find the list of tasks and on going activities.
 
 ## Licensing and acknowledgements
 
-Have a look at [LICENSE](LICENSE.md) and many thanks to Yarin Kessler for [file_sqlite_handler.py](https://gist.github.com/ykessler/2662203#file_sqlite_handler.py). Also thanks to Corey Schafer for this fantastic video [Python Tutorial: Logging Advanced - Loggers, Handlers, and Formatters](https://www.youtube.com/watch?v=jxmzY9soFXg&t=42s).
+Have a look at [LICENSE.md](LICENSE.md) and many thanks to Yarin Kessler for [file_sqlite_handler.py](https://gist.github.com/ykessler/2662203#file_sqlite_handler.py). Also thanks to Corey Schafer for this fantastic video [Python Tutorial: Logging Advanced - Loggers, Handlers, and Formatters](https://www.youtube.com/watch?v=jxmzY9soFXg&t=42s).
 
 ## Outro
 
