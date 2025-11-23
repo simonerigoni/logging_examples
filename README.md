@@ -24,6 +24,8 @@ This project uses Python 3.11.9 and the most important packages are:
 * [logging](https://docs.python.org/3/library/logging.html)
 * [sqlite3](https://docs.python.org/3/library/sqlite3.html)
 
+## Local configuration
+
 To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`
 
 Alternatively to create the virtual enviroment you can run `python -m venv .venv`.
