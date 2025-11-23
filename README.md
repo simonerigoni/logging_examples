@@ -19,7 +19,7 @@ Setup for this examples: let's generates random integers and let's suppose that 
 
 ## Software and libraries
 
-This project uses Python 3.11.9 and the most important packages are:
+This project uses Python 3.11 and the most important packages are:
 
 * [logging](https://docs.python.org/3/library/logging.html)
 * [sqlite3](https://docs.python.org/3/library/sqlite3.html)
