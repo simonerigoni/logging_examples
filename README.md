@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Logging means to track what events happens when you run some software. In Python the easiest way to do that is to use print() statements when your code needs to perform actions that you want to track. If you need some more advanced logging (i.e. save the logs in a file or in a database table) the easiest way is to use [logging](https://docs.python.org/3/library/logging.html)
+Logging means to track what events happens when you run some software. In Python the easiest way to do that is to use print() statements when your code needs to perform actions that you want to track. If you need some more advanced logging (i.e. save the logs in a file or in a database table) the easiest way is to use [logging](https://docs.python.org/3/library/logging.html).
 
-Another point to consider is: when do you have to use logging vs raise an exception? In a nutshell as always it depends on what you have to do. How the software is expected to behave? Is the error so critical that further steps cannot/should not be done? In this case the exception is the expected behaviour. Is it ok to go on with the execution of the code even if we got some errors? Ok in this case let's keep track that we got some errors but let's continue if the execution of the code. Really interesting discussion on reddit about this [topic](https://www.reddit.com/r/learnpython/comments/9l0aqb/when_should_i_use_loggererror_vs_raise_exception/)
+Another point to consider is: when do you have to use logging vs raise an exception? In a nutshell as always it depends on what you have to do. How the software is expected to behave? Is the error so critical that further steps cannot/should not be done? In this case the exception is the expected behaviour. Is it ok to go on with the execution of the code even if we got some errors? Ok in this case let's keep track that we got some errors but let's continue if the execution of the code. Really interesting discussion on reddit about this [topic](https://www.reddit.com/r/learnpython/comments/9l0aqb/when_should_i_use_loggererror_vs_raise_exception/).
 
 Setup for this examples: let's generates random integers and let's suppose that the values generated must respect some thresholds which indicates if a value is a warning, an error or a critical error. We will use the logging levels:
 
@@ -15,7 +15,6 @@ Setup for this examples: let's generates random integers and let's suppose that 
 | WARNING  | An indication that something unexpected happened, or indicative of some problem in the near future. The software is still working as expected |
 | ERROR    | Due to a more serious problem, the software has not been able to perform some function                                                        |
 | CRITICAL | A serious error, indicating that the program itself may be unable to continue running                                                         |
-
 
 ## Software and libraries
 
@@ -43,6 +42,7 @@ To run a single test: `pytest .\tests\test_dummy.py::test_dummy`
 [PEP8](https://peps.python.org/pep-0008/) is the style guide for Python code, and it's good practice to follow it to ensure your code is readable and consistent.
 
 To check and format my code according to PEP8 I am using:
+
 - [pycodestyle](https://pypi.org/project/pycodestyle/): tool to check the code against PEP 8 conventions.
 - [autopep8](https://pypi.org/project/autopep8/): tool to automatically format Python code according to PEP 8 standards.
 
@@ -61,6 +61,7 @@ I prefere to check and update one file at the time because the previous recursiv
 ## Running the code
 
 There are 3 examples:
+
 * example_1: let's use print() to log what is happening in the code.
 * example_2: using example_1 as base let's use logging module and create a log file.
 * example_3: using the example_2 as base let's track different errors level in different ways. In this example I have also created SQLiteHandler.py to log error messages on a SQL table.
