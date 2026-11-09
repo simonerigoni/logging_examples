@@ -18,16 +18,19 @@ import random
 import logging
 
 
-current_filename = os.path.basename(__file__).rsplit('.', 1)[0]
+current_filename = os.path.basename(__file__).rsplit(".", 1)[0]
 
 # changing level we can change frome what level we want to log the events
 
-logging.basicConfig(filename=current_filename + '.log',
-                    level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(
+    filename=current_filename + ".log",
+    level=logging.INFO,
+    format="%(asctime)s:%(levelname)s:%(message)s",
+)
 
 
-if __name__ == '__main__':
-    logging.info('Generate some random integers')
+if __name__ == "__main__":
+    logging.info("Generate some random integers")
 
     num_numbers = 10
     min_value = 0
@@ -36,30 +39,38 @@ if __name__ == '__main__':
     error_threshold = 10
     critical_threshold = 15
 
-    logging.debug('Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}'.format(
-        num_numbers, min_value, max_value, warning_threshold, error_threshold, critical_threshold))
+    logging.debug(
+        "Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}".format(
+            num_numbers,
+            min_value,
+            max_value,
+            warning_threshold,
+            error_threshold,
+            critical_threshold,
+        )
+    )
 
-    logging.debug('Start')
+    logging.debug("Start")
     for i in range(num_numbers):
-        logging.debug('Iteration: {}'.format(i))
+        logging.debug("Iteration: {}".format(i))
         value = random.randint(min_value, max_value)
 
         try:
-            logging.debug('\tTry value')
+            logging.debug("\tTry value")
             if value > critical_threshold:
-                raise Exception('\tValue: {} -> Critical!'.format(value))
+                raise Exception("\tValue: {} -> Critical!".format(value))
             elif value > error_threshold:
-                logging.error('\tValue: {} -> Error!'.format(value))
+                logging.error("\tValue: {} -> Error!".format(value))
             elif value > warning_threshold:
-                logging.warning('\tValue: {} -> Warning!'.format(value))
+                logging.warning("\tValue: {} -> Warning!".format(value))
             else:
-                logging.info('\tValue: {}'.format(value))
+                logging.info("\tValue: {}".format(value))
         except Exception as e:
             logging.critical(e)
             exit()
         finally:
-            logging.debug('The try except is finished')
+            logging.debug("The try except is finished")
 
-    logging.debug('End')
+    logging.debug("End")
 else:
     pass

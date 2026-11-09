@@ -14,3 +14,8 @@ temp/
 
 # Code style reports
 code_style/*.txt
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+COVERAGE.md
