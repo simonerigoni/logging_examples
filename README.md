@@ -1,5 +1,7 @@
 # Logging examples
 
+[![CI](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml?query=branch%3Amain) [![License](https://img.shields.io/github/license/simonerigoni/logging_examples)](LICENSE.md) [![Python](https://img.shields.io/badge/python-3.14-blue)](pyproject.toml) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
+
 ## Introduction
 
 Logging means to track what events happens when you run some software. In Python the easiest way to do that is to use print() statements when your code needs to perform actions that you want to track. If you need some more advanced logging (i.e. save the logs in a file or in a database table) the easiest way is to use [logging](https://docs.python.org/3/library/logging.html).
