@@ -1,6 +1,6 @@
 # Logging examples
 
-[![CI](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml?query=branch%3Amain) [![License](https://img.shields.io/github/license/simonerigoni/logging_examples)](LICENSE.md) [![Python](https://img.shields.io/badge/python-3.14-blue)](pyproject.toml) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
+[![CI](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml?query=branch%3Amain) [![License](https://img.shields.io/github/license/simonerigoni/logging_examples)](LICENSE.md) [![Python](https://img.shields.io/badge/python-3.14-blue)](pyproject.toml) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
 
 ## Introduction
 
