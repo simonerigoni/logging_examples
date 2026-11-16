@@ -3,8 +3,8 @@
 # python read_log_table.py
 
 import sqlite3
-import pandas as pd
 
+import pandas as pd
 
 MY_DATABASE = "example_3.db"
 MY_TABLE = "log"

@@ -27,15 +27,22 @@ This project uses Python 3.11 and the most important packages are:
 
 ## Local configuration
 
-To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`
+To set up a local environment and install all dependencies, run `uv sync` from the project folder.
 
-Alternatively to create the virtual enviroment you can run `python -m venv .venv`.
+Then run the checks with:
+
+```bash
+uv run pre-commit run --all-files
+uv run pytest
+```
+
+The PowerShell helpers in `my_scripts/` are leftover legacy wrappers (pip, autopep8, pycodestyle) and are kept only because they are not simple uv/ruff/pytest wrappers.
 
 ## Testing
 
-You can run `.\my_scripts\Test.ps1`.
+Run tests with `uv run pytest`.
 
-Alternatively from the project folder run `pytest`
+Alternatively you can still run `.\my_scripts\Test.ps1`.
 
 To run a single test: `pytest .\tests\test_dummy.py::test_dummy`
 
@@ -48,7 +55,9 @@ To check and format my code according to PEP8 I am using:
 - [pycodestyle](https://pypi.org/project/pycodestyle/): tool to check the code against PEP 8 conventions.
 - [autopep8](https://pypi.org/project/autopep8/): tool to automatically format Python code according to PEP 8 standards.
 
-You can run `.\my_scripts\FormatAndLint.ps1`.
+Preferred: `uv run ruff check --fix .` and `uv run ruff format .`.
+
+Alternatively you can still run `.\my_scripts\FormatAndLint.ps1` (legacy autopep8/pycodestyle).
 
 Alternatively to run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > code_style\report.txt`
 

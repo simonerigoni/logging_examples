@@ -13,11 +13,11 @@
 # python example_3.py
 
 
+import logging
 import os
 import random
-import logging
-import SQLiteHandler
 
+import SQLiteHandler
 
 current_filename = os.path.basename(__file__).rsplit(".", 1)[0]
 my_database = current_filename + ".db"
@@ -68,31 +68,24 @@ if __name__ == "__main__":
     critical_threshold = 15
 
     logger.debug(
-        "Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}".format(
-            num_numbers,
-            min_value,
-            max_value,
-            warning_threshold,
-            error_threshold,
-            critical_threshold,
-        )
+        f"Numbers: {num_numbers}\nMin value: {min_value}\nMax value: {max_value}\nWaring threshold: {warning_threshold}\nError threshold: {error_threshold}\nCritical threshold: {critical_threshold}"
     )
 
     logger.debug("Start")
     for i in range(num_numbers):
-        logger.debug("Iteration: {}".format(i))
+        logger.debug(f"Iteration: {i}")
         value = random.randint(min_value, max_value)
 
         try:
             logger.debug("\tTry value")
             if value > critical_threshold:
-                raise Exception("\tValue: {} -> Critical!".format(value))
+                raise Exception(f"\tValue: {value} -> Critical!")
             elif value > error_threshold:
-                logger.error("\tValue: {} -> Error!".format(value))
+                logger.error(f"\tValue: {value} -> Error!")
             elif value > warning_threshold:
-                logger.warning("\tValue: {} -> Warning!".format(value))
+                logger.warning(f"\tValue: {value} -> Warning!")
             else:
-                logger.info("\tValue: {}".format(value))
+                logger.info(f"\tValue: {value}")
         except Exception as e:
             logger.critical(e)
             exit()
