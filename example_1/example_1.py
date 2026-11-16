@@ -6,7 +6,6 @@
 
 import random
 
-
 if __name__ == "__main__":
     print("Generate some random integers")
 
@@ -18,31 +17,24 @@ if __name__ == "__main__":
     critical_threshold = 15
 
     print(
-        "Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}".format(
-            num_numbers,
-            min_value,
-            max_value,
-            warning_threshold,
-            error_threshold,
-            critical_threshold,
-        )
+        f"Numbers: {num_numbers}\nMin value: {min_value}\nMax value: {max_value}\nWaring threshold: {warning_threshold}\nError threshold: {error_threshold}\nCritical threshold: {critical_threshold}"
     )
 
     print("Start")
     for i in range(num_numbers):
-        print("Iteration: {}".format(i))
+        print(f"Iteration: {i}")
         value = random.randint(min_value, max_value)
 
         try:
             print("\tTry value")
             if value > critical_threshold:
-                raise Exception("\tValue: {} -> Critical!".format(value))
+                raise Exception(f"\tValue: {value} -> Critical!")
             elif value > error_threshold:
-                print("\tValue: {} -> Error!".format(value))
+                print(f"\tValue: {value} -> Error!")
             elif value > warning_threshold:
-                print("\tValue: {} -> Warning!".format(value))
+                print(f"\tValue: {value} -> Warning!")
             else:
-                print("\tValue: {}".format(value))
+                print(f"\tValue: {value}")
         except Exception as e:
             print(e)
             exit()

@@ -13,10 +13,9 @@
 # python example_2.py
 
 
+import logging
 import os
 import random
-import logging
-
 
 current_filename = os.path.basename(__file__).rsplit(".", 1)[0]
 
@@ -40,31 +39,24 @@ if __name__ == "__main__":
     critical_threshold = 15
 
     logging.debug(
-        "Numbers: {}\nMin value: {}\nMax value: {}\nWaring threshold: {}\nError threshold: {}\nCritical threshold: {}".format(
-            num_numbers,
-            min_value,
-            max_value,
-            warning_threshold,
-            error_threshold,
-            critical_threshold,
-        )
+        f"Numbers: {num_numbers}\nMin value: {min_value}\nMax value: {max_value}\nWaring threshold: {warning_threshold}\nError threshold: {error_threshold}\nCritical threshold: {critical_threshold}"
     )
 
     logging.debug("Start")
     for i in range(num_numbers):
-        logging.debug("Iteration: {}".format(i))
+        logging.debug(f"Iteration: {i}")
         value = random.randint(min_value, max_value)
 
         try:
             logging.debug("\tTry value")
             if value > critical_threshold:
-                raise Exception("\tValue: {} -> Critical!".format(value))
+                raise Exception(f"\tValue: {value} -> Critical!")
             elif value > error_threshold:
-                logging.error("\tValue: {} -> Error!".format(value))
+                logging.error(f"\tValue: {value} -> Error!")
             elif value > warning_threshold:
-                logging.warning("\tValue: {} -> Warning!".format(value))
+                logging.warning(f"\tValue: {value} -> Warning!")
             else:
-                logging.info("\tValue: {}".format(value))
+                logging.info(f"\tValue: {value}")
         except Exception as e:
             logging.critical(e)
             exit()

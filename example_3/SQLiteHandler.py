@@ -7,10 +7,10 @@
 # python SQLiteHandler.py
 
 
-import sqlite3
 import logging
-import pandas as pd
+import sqlite3
 
+import pandas as pd
 
 DEFAULT_SEPARATOR = "|"
 DEFAULT_DATA_TYPE = "TEXT"
@@ -79,7 +79,7 @@ class SQLiteHandler(logging.Handler):
         # print(record.__dict__)
         record_values = [record.__dict__[k] for k in self.attributes]
         str_record_values = ", ".join(
-            "'{0}'".format(v.replace("'", "").replace('"', "").replace("\n", " "))
+            "'{}'".format(v.replace("'", "").replace('"', "").replace("\n", " "))
             for v in record_values
         )
         # print(str_record_values)
@@ -103,7 +103,7 @@ class SQLiteHandler(logging.Handler):
 if __name__ == "__main__":
     my_database = "sqlite.db"
     my_table = "log"
-    print("Test SQLiteHandler\n\tdatabase: {}\n\ttable: {}".format(my_database, my_table))
+    print(f"Test SQLiteHandler\n\tdatabase: {my_database}\n\ttable: {my_table}")
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
 
