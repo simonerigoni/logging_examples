@@ -3,10 +3,18 @@ name = "logging-examples"
 version = "0.1.0"
 description = "Logging examples"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.15"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE.md"]
+authors = [{ name = "Simone Rigoni" }]
 dependencies = [
     "pandas>=3.1.1",
 ]
+
+
+[project.urls]
+Repository = "https://github.com/simonerigoni/logging_examples"
+Medium = "https://medium.com/@simone-rigoni01/logging-with-logging-in-python-d3d8eb9a155a"
 
 [dependency-groups]
 dev = [
