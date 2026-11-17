@@ -1,6 +1,6 @@
 # Logging examples
 
-[![CI](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml?query=branch%3Amain) [![License](https://img.shields.io/github/license/simonerigoni/logging_examples)](LICENSE.md) [![Python](https://img.shields.io/badge/python-3.14-blue)](pyproject.toml) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
+[![CI](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simonerigoni/logging_examples/actions/workflows/ci.yml?query=branch%3Amain) [![License](https://img.shields.io/github/license/simonerigoni/logging_examples)](LICENSE.md) [![Python](https://img.shields.io/badge/python-3.15-blue)](pyproject.toml) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
 
 ## Introduction
 
@@ -20,7 +20,7 @@ Setup for this examples: let's generates random integers and let's suppose that 
 
 ## Software and libraries
 
-This project uses Python 3.11 and the most important packages are:
+This project uses Python 3.15 and the most important packages are:
 
 * [logging](https://docs.python.org/3/library/logging.html)
 * [sqlite3](https://docs.python.org/3/library/sqlite3.html)
@@ -44,30 +44,13 @@ Run tests with `uv run pytest`.
 
 Alternatively you can still run `.\my_scripts\Test.ps1`.
 
-To run a single test: `pytest .\tests\test_dummy.py::test_dummy`
+To run a single test: `uv run pytest tests/test_sqlite_handler.py`.
 
 ## Code styling
 
-[PEP8](https://peps.python.org/pep-0008/) is the style guide for Python code, and it's good practice to follow it to ensure your code is readable and consistent.
+Code is linted and formatted with [ruff](https://docs.astral.sh/ruff/): `uv run ruff check --fix .` and `uv run ruff format .`.
 
-To check and format my code according to PEP8 I am using:
-
-- [pycodestyle](https://pypi.org/project/pycodestyle/): tool to check the code against PEP 8 conventions.
-- [autopep8](https://pypi.org/project/autopep8/): tool to automatically format Python code according to PEP 8 standards.
-
-Preferred: `uv run ruff check --fix .` and `uv run ruff format .`.
-
-Alternatively you can still run `.\my_scripts\FormatAndLint.ps1` (legacy autopep8/pycodestyle).
-
-Alternatively to run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > code_style\report.txt`
-
-To run autopep8 on all files in the project folder: `autopep8 --recursive --in-place .`
-
-I prefere to check and update one file at the time because the previous recursive commands affect also `.\venv\` files. For example:
-
-`pycodestyle .\example_1\example_1.py > .\code_style\example_1_report.txt`
-
-`autopep8 --in-place .\example_1\example_1.py`
+The PowerShell helpers in `my_scripts/` still invoke autopep8 and pycodestyle as leftover legacy wrappers; prefer ruff.
 
 ## Running the code
 
