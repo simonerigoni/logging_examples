@@ -38,3 +38,6 @@ venv = ".venv"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+
+[tool.coverage.run]
+source = ["example_1", "example_2", "example_3", "code_style"]
